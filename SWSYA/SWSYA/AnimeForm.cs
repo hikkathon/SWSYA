@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SWSYA
 {
-    public partial class Form1 : Form
+    public partial class AnimeForm : Form
     {
-        public Form1()
+        public AnimeForm()
         {
             InitializeComponent();
         }
