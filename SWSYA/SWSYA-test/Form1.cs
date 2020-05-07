@@ -20,6 +20,8 @@ namespace SWSYA_test
             InitializeComponent();
         }
 
+        List<string> hrefitem = new List<string>();
+
         public delegate void AddMessageTestDelegate(string message);
         public void MessageTest(string message)
         {
@@ -38,14 +40,21 @@ namespace SWSYA_test
 
             var html = toolStripTextBoxURL.Text;
 
-            List<string> hrefitem  = new List<string>();
-
             int testCounter = 0;
             sw.Start();
             for (int i = StartPage; i <= EndPage; i++)
             {
                 var htmlDoc = web.Load(html + "/catalog?page=" + i);
                 var posts = htmlDoc.DocumentNode.SelectNodes(".//div[@class='content-page categories-page']/div[@class='anime-column']"); // в переменную post парсим аниме из каталога
+
+                if (posts==null)
+                {
+                    Invoke(new AddMessageTestDelegate(MessageTest), new object[] { testCounter.ToString() + " Wait..."});
+                    Thread.Sleep(40000);
+                    htmlDoc = web.Load(html + "/catalog?page=" + i);
+                    posts = htmlDoc.DocumentNode.SelectNodes(".//div[@class='content-page categories-page']/div[@class='anime-column']"); // в переменную post парсим аниме из каталога
+                }
+
                 foreach (var post in posts)
                 {
                     var _hrefitem = post.SelectSingleNode("./a[@class='image-block']")?.GetAttributes("href"); // вытягиваем ссылки на страницу с аниме
@@ -69,6 +78,11 @@ namespace SWSYA_test
         {
             Task task = new Task(() => StartParse());
             task.Start();
+        }
+
+        private void toolStripTextBoxURL_DoubleClick(object sender, EventArgs e)
+        {
+            toolStripTextBoxURL.Text = "https://yummyanime.club";
         }
     }
 }
