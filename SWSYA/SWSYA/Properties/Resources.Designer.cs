@@ -143,6 +143,16 @@ namespace SWSYA.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_настройки_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-настройки-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_развернуть_окно_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-развернуть-окно-96", resourceCulture);
@@ -156,6 +166,26 @@ namespace SWSYA.Properties {
         internal static System.Drawing.Bitmap icons8_свернуть_окно_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-свернуть-окно-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_сетка_4x4_96 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-сетка-4x4-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_спидометр_96 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-спидометр-96", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

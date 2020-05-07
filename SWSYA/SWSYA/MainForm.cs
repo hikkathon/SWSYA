@@ -35,7 +35,7 @@ namespace SWSYA
         {
             if (VerticalSplashPanel.Width == 150)
             {
-                VerticalSplashPanel.Width = 50;
+                VerticalSplashPanel.Width = 39;
             }
             else
             {
@@ -100,7 +100,7 @@ namespace SWSYA
             }
         }
 
-        private void VerticalSplashPanel_MouseDown(object sender, MouseEventArgs e)
+        private void TopPanel_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
