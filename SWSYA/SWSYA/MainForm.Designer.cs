@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             this.TopPanel = new System.Windows.Forms.Panel();
-            this.VerticalSplashPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.ContentedPanel = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnAnime = new System.Windows.Forms.Button();
             this.btnMaximize = new System.Windows.Forms.PictureBox();
             this.btnMenu = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.btnReestablish = new System.Windows.Forms.PictureBox();
+            this.VerticalSplashPanel = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnAnime = new System.Windows.Forms.Button();
+            this.ContentedPanel = new System.Windows.Forms.Panel();
             this.TopPanel.SuspendLayout();
-            this.VerticalSplashPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnReestablish)).BeginInit();
+            this.VerticalSplashPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // TopPanel
@@ -66,6 +66,82 @@
             this.TopPanel.TabIndex = 4;
             this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.label1.Location = new System.Drawing.Point(6, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "SWSAY";
+            // 
+            // btnMaximize
+            // 
+            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMaximize.Image = global::SWSYA.Properties.Resources.icons8_развернуть_окно_96;
+            this.btnMaximize.Location = new System.Drawing.Point(756, 11);
+            this.btnMaximize.Name = "btnMaximize";
+            this.btnMaximize.Size = new System.Drawing.Size(15, 15);
+            this.btnMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMaximize.TabIndex = 0;
+            this.btnMaximize.TabStop = false;
+            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenu.Image = global::SWSYA.Properties.Resources.icons8_menu_50;
+            this.btnMenu.Location = new System.Drawing.Point(85, 11);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(15, 15);
+            this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMenu.TabIndex = 0;
+            this.btnMenu.TabStop = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.Image = global::SWSYA.Properties.Resources.icons8_свернуть_окно_96;
+            this.btnMinimize.Location = new System.Drawing.Point(735, 11);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(15, 15);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMinimize.TabIndex = 0;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Image = global::SWSYA.Properties.Resources.icons8_закрыть_окно_96;
+            this.btnClose.Location = new System.Drawing.Point(777, 11);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(15, 15);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnClose.TabIndex = 0;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnReestablish
+            // 
+            this.btnReestablish.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReestablish.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReestablish.Image = global::SWSYA.Properties.Resources.icons8_восстановить_окно_96;
+            this.btnReestablish.Location = new System.Drawing.Point(756, 11);
+            this.btnReestablish.Name = "btnReestablish";
+            this.btnReestablish.Size = new System.Drawing.Size(15, 15);
+            this.btnReestablish.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnReestablish.TabIndex = 0;
+            this.btnReestablish.TabStop = false;
+            this.btnReestablish.Visible = false;
+            this.btnReestablish.Click += new System.EventHandler(this.btnReestablish_Click);
+            // 
             // VerticalSplashPanel
             // 
             this.VerticalSplashPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
@@ -79,26 +155,6 @@
             this.VerticalSplashPanel.Name = "VerticalSplashPanel";
             this.VerticalSplashPanel.Size = new System.Drawing.Size(150, 413);
             this.VerticalSplashPanel.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.label1.Location = new System.Drawing.Point(6, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "SWSAY";
-            // 
-            // ContentedPanel
-            // 
-            this.ContentedPanel.BackColor = System.Drawing.Color.White;
-            this.ContentedPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ContentedPanel.Location = new System.Drawing.Point(150, 37);
-            this.ContentedPanel.Name = "ContentedPanel";
-            this.ContentedPanel.Size = new System.Drawing.Size(650, 413);
-            this.ContentedPanel.TabIndex = 7;
             // 
             // button4
             // 
@@ -171,6 +227,7 @@
             // 
             // btnAnime
             // 
+            this.btnAnime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAnime.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.btnAnime.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.btnAnime.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(103)))), ((int)(((byte)(102)))));
@@ -187,70 +244,14 @@
             this.btnAnime.UseVisualStyleBackColor = true;
             this.btnAnime.Click += new System.EventHandler(this.btnAnime_Click);
             // 
-            // btnMaximize
+            // ContentedPanel
             // 
-            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMaximize.Image = global::SWSYA.Properties.Resources.icons8_развернуть_окно_96;
-            this.btnMaximize.Location = new System.Drawing.Point(756, 11);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(15, 15);
-            this.btnMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnMaximize.TabIndex = 0;
-            this.btnMaximize.TabStop = false;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMenu.Image = global::SWSYA.Properties.Resources.icons8_menu_50;
-            this.btnMenu.Location = new System.Drawing.Point(85, 11);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(15, 15);
-            this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnMenu.TabIndex = 0;
-            this.btnMenu.TabStop = false;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimize.Image = global::SWSYA.Properties.Resources.icons8_свернуть_окно_96;
-            this.btnMinimize.Location = new System.Drawing.Point(735, 11);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(15, 15);
-            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnMinimize.TabIndex = 0;
-            this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Image = global::SWSYA.Properties.Resources.icons8_закрыть_окно_96;
-            this.btnClose.Location = new System.Drawing.Point(777, 11);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(15, 15);
-            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnClose.TabIndex = 0;
-            this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnReestablish
-            // 
-            this.btnReestablish.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReestablish.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReestablish.Image = global::SWSYA.Properties.Resources.icons8_восстановить_окно_96;
-            this.btnReestablish.Location = new System.Drawing.Point(756, 11);
-            this.btnReestablish.Name = "btnReestablish";
-            this.btnReestablish.Size = new System.Drawing.Size(15, 15);
-            this.btnReestablish.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnReestablish.TabIndex = 0;
-            this.btnReestablish.TabStop = false;
-            this.btnReestablish.Visible = false;
-            this.btnReestablish.Click += new System.EventHandler(this.btnReestablish_Click);
+            this.ContentedPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            this.ContentedPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ContentedPanel.Location = new System.Drawing.Point(150, 37);
+            this.ContentedPanel.Name = "ContentedPanel";
+            this.ContentedPanel.Size = new System.Drawing.Size(650, 413);
+            this.ContentedPanel.TabIndex = 7;
             // 
             // MainForm
             // 
@@ -267,12 +268,12 @@
             this.Text = "MainForm";
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
-            this.VerticalSplashPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnReestablish)).EndInit();
+            this.VerticalSplashPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
