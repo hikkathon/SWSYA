@@ -35,11 +35,8 @@
             this.toolStripTextBoxStartPage = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripTextBoxEndPage = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripButtonStart = new System.Windows.Forms.ToolStripButton();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelElementCounter = new System.Windows.Forms.ToolStripStatusLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,9 +58,20 @@
             this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.labelNameAnime = new System.Windows.Forms.Label();
+            this.labelURL = new System.Windows.Forms.Label();
+            this.labelCountAnime = new System.Windows.Forms.Label();
+            this.labelCountUrl = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.toolStripButtonStart = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -75,7 +83,8 @@
             this.toolStripTextBoxStartPage,
             this.toolStripLabel3,
             this.toolStripTextBoxEndPage,
-            this.toolStripButtonStart});
+            this.toolStripButtonStart,
+            this.toolStripButtonSave});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 25);
@@ -119,44 +128,13 @@
             this.toolStripTextBoxEndPage.Name = "toolStripTextBoxEndPage";
             this.toolStripTextBoxEndPage.Size = new System.Drawing.Size(25, 25);
             // 
-            // toolStripButtonStart
-            // 
-            this.toolStripButtonStart.Image = global::SWSYA_test.Properties.Resources.iconfinder_Play_Green_Button_38825;
-            this.toolStripButtonStart.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonStart.Name = "toolStripButtonStart";
-            this.toolStripButtonStart.Size = new System.Drawing.Size(51, 22);
-            this.toolStripButtonStart.Text = "Start";
-            this.toolStripButtonStart.Click += new System.EventHandler(this.toolStripButtonStart_Click);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabelElementCounter});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(67, 17);
-            this.toolStripStatusLabel1.Text = "Элементов";
-            // 
-            // toolStripStatusLabelElementCounter
-            // 
-            this.toolStripStatusLabelElementCounter.Name = "toolStripStatusLabelElementCounter";
-            this.toolStripStatusLabelElementCounter.Size = new System.Drawing.Size(13, 17);
-            this.toolStripStatusLabelElementCounter.Text = "0";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column22,
             this.Column1,
             this.Column2,
             this.Column3,
@@ -179,11 +157,17 @@
             this.Column20,
             this.Column21});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 25);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 403);
+            this.dataGridView1.Size = new System.Drawing.Size(800, 389);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // Column22
+            // 
+            this.Column22.HeaderText = "#";
+            this.Column22.Name = "Column22";
+            this.Column22.ReadOnly = true;
             // 
             // Column1
             // 
@@ -311,21 +295,118 @@
             this.Column21.Name = "Column21";
             this.Column21.ReadOnly = true;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.labelNameAnime);
+            this.panel1.Controls.Add(this.labelURL);
+            this.panel1.Controls.Add(this.labelCountAnime);
+            this.panel1.Controls.Add(this.labelCountUrl);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 414);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 36);
+            this.panel1.TabIndex = 3;
+            // 
+            // labelNameAnime
+            // 
+            this.labelNameAnime.AutoSize = true;
+            this.labelNameAnime.Location = new System.Drawing.Point(180, 17);
+            this.labelNameAnime.Name = "labelNameAnime";
+            this.labelNameAnime.Size = new System.Drawing.Size(18, 13);
+            this.labelNameAnime.TabIndex = 3;
+            this.labelNameAnime.Text = "url";
+            // 
+            // labelURL
+            // 
+            this.labelURL.AutoSize = true;
+            this.labelURL.Location = new System.Drawing.Point(180, 4);
+            this.labelURL.Name = "labelURL";
+            this.labelURL.Size = new System.Drawing.Size(18, 13);
+            this.labelURL.TabIndex = 3;
+            this.labelURL.Text = "url";
+            // 
+            // labelCountAnime
+            // 
+            this.labelCountAnime.AutoSize = true;
+            this.labelCountAnime.Location = new System.Drawing.Point(98, 17);
+            this.labelCountAnime.Name = "labelCountAnime";
+            this.labelCountAnime.Size = new System.Drawing.Size(13, 13);
+            this.labelCountAnime.TabIndex = 2;
+            this.labelCountAnime.Text = "0";
+            // 
+            // labelCountUrl
+            // 
+            this.labelCountUrl.AutoSize = true;
+            this.labelCountUrl.Location = new System.Drawing.Point(98, 4);
+            this.labelCountUrl.Name = "labelCountUrl";
+            this.labelCountUrl.Size = new System.Drawing.Size(13, 13);
+            this.labelCountUrl.TabIndex = 2;
+            this.labelCountUrl.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Anime загружено:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "URL загружено:";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 25);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 389);
+            this.panel2.TabIndex = 4;
+            // 
+            // toolStripButtonStart
+            // 
+            this.toolStripButtonStart.Image = global::SWSYA_test.Properties.Resources.iconfinder_Play_Green_Button_38825;
+            this.toolStripButtonStart.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonStart.Name = "toolStripButtonStart";
+            this.toolStripButtonStart.Size = new System.Drawing.Size(51, 22);
+            this.toolStripButtonStart.Text = "Start";
+            this.toolStripButtonStart.Click += new System.EventHandler(this.toolStripButtonStart_Click);
+            // 
+            // toolStripButtonSave
+            // 
+            this.toolStripButtonSave.Image = global::SWSYA_test.Properties.Resources.iconfinder_Open_1493293;
+            this.toolStripButtonSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonSave.Name = "toolStripButtonSave";
+            this.toolStripButtonSave.Size = new System.Drawing.Size(51, 22);
+            this.toolStripButtonSave.Text = "Save";
+            this.toolStripButtonSave.Click += new System.EventHandler(this.toolStripButtonSave_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,10 +422,16 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBoxEndPage;
         private System.Windows.Forms.ToolStripButton toolStripButtonStart;
-        private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelElementCounter;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label labelURL;
+        private System.Windows.Forms.Label labelCountUrl;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelCountAnime;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelNameAnime;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column22;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -366,6 +453,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
+        private System.Windows.Forms.ToolStripButton toolStripButtonSave;
     }
 }
 

@@ -63,6 +63,16 @@ namespace SWSYA_test.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Open_1493293 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Open_1493293", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_Play_Green_Button_38825 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_Play Green Button_38825", resourceCulture);
