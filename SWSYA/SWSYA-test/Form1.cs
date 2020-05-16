@@ -105,7 +105,7 @@ namespace SWSYA_test
 
                 if (infolists==null)
                 {
-                    Thread.Sleep(50000);
+                    Thread.Sleep(55000);
 
                     htmlDoc = web.Load(hrefitem);
 
@@ -215,7 +215,7 @@ namespace SWSYA_test
                             break;
                     }
                 }
-                Invoke(new ShowDataViewGridDelegate(ShowDataViewGrid), new object[] { counterAnime ,title, rating, vote, aTitle, view, status, released, season, ageRating, genre, primarySourse, studio, producer, type, series, transfer, voiceActing, description, labelURL.Text+urlimage, license, lAnime });
+                Invoke(new ShowDataViewGridDelegate(ShowDataViewGrid), new object[] { counterAnime ,title, rating, vote, aTitle, view, status, released, season, ageRating, genre, primarySourse, studio, producer, type, series, transfer, voiceActing, description, toolStripTextBoxURL.Text + urlimage, license, lAnime });
                 Invoke(new AddFormProgressDelegate2(FormProgress2), new object[] { title, $"{counterAnime} / " + (EndPage * 24).ToString() });
             }
             Invoke(new AddFormProgressDelegate2(FormProgress2), new object[] { "Готово.", $"{counterAnime} / " + (EndPage * 24).ToString() });
